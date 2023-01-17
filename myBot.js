@@ -38,7 +38,7 @@ class Bot {
                 } else if (counterForDynamiteP1<100){
                     return "D";
                 } {
-            
+                        // need to improve this section. Now it's just random;
                         if (counterForDynamiteP2==100){
                             let randomIndex = Math.floor(3 * Math.random())
                             return ['R', 'P', 'S'][randomIndex] 
