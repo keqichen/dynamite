@@ -1,5 +1,7 @@
 // const randomBot = require("./randomBot");
 
+// This bot, for some reason, can beat the draw strategy.
+
 class Bot {
     makeMove(gamestate) {
         var counterForDynamiteP2 = 0;
@@ -28,7 +30,7 @@ class Bot {
                 let randomIndex = Math.floor(3 * Math.random())
                 return ['R', 'P', 'S'][randomIndex]
             } else {
-                return "D";
+                return "D"; // heavily used D at the beginning may not be a great idea;
             }
         } else {
 
@@ -38,13 +40,11 @@ class Bot {
             } else if (counterForDynamiteP1 < 100) {
                 return "D";
             } {
-                // need to improve this section. Now it's just random;
+                // need to improve this section. Now it's just random; 
+                // think of more sophisticated way to beat the randomness;
                 if (counterForDynamiteP2 == 100) {
                     let randomIndex = Math.floor(3 * Math.random())
                     return ['R', 'P', 'S'][randomIndex]
-                } else {
-                    let randomIndex = Math.floor(4 * Math.random())
-                    return ['R', 'P', 'S', 'W'][randomIndex]
                 }
             }
 
